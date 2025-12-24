@@ -1,0 +1,15 @@
+/Users/neil/Desktop/Capegemini_Training/CallAccount/bin/Debug/net10.0/CallAccount
+/Users/neil/Desktop/Capegemini_Training/CallAccount/bin/Debug/net10.0/CallAccount.deps.json
+/Users/neil/Desktop/Capegemini_Training/CallAccount/bin/Debug/net10.0/CallAccount.runtimeconfig.json
+/Users/neil/Desktop/Capegemini_Training/CallAccount/bin/Debug/net10.0/CallAccount.dll
+/Users/neil/Desktop/Capegemini_Training/CallAccount/bin/Debug/net10.0/CallAccount.pdb
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.GeneratedMSBuildEditorConfig.editorconfig
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.AssemblyInfoInputs.cache
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.AssemblyInfo.cs
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.csproj.CoreCompileInputs.cache
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.sourcelink.json
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.dll
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/refint/CallAccount.dll
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.pdb
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/CallAccount.genruntimeconfig.cache
+/Users/neil/Desktop/Capegemini_Training/CallAccount/obj/Debug/net10.0/ref/CallAccount.dll

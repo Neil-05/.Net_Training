@@ -1,0 +1,15 @@
+/Users/neil/Desktop/Capegemini_Training/overriding/bin/Debug/net10.0/overriding
+/Users/neil/Desktop/Capegemini_Training/overriding/bin/Debug/net10.0/overriding.deps.json
+/Users/neil/Desktop/Capegemini_Training/overriding/bin/Debug/net10.0/overriding.runtimeconfig.json
+/Users/neil/Desktop/Capegemini_Training/overriding/bin/Debug/net10.0/overriding.dll
+/Users/neil/Desktop/Capegemini_Training/overriding/bin/Debug/net10.0/overriding.pdb
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.GeneratedMSBuildEditorConfig.editorconfig
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.AssemblyInfoInputs.cache
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.AssemblyInfo.cs
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.csproj.CoreCompileInputs.cache
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.sourcelink.json
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.dll
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/refint/overriding.dll
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.pdb
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/overriding.genruntimeconfig.cache
+/Users/neil/Desktop/Capegemini_Training/overriding/obj/Debug/net10.0/ref/overriding.dll
