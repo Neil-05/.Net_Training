@@ -1,6 +1,8 @@
 ﻿// Program.cs
 using System;
 
+
+
 namespace CallbacksWithDelegates
 {
     // 1) Create a delegate type (signature: void (string))
