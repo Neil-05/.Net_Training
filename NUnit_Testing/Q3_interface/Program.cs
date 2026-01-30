@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Q3_interface
+﻿namespace Q3_interface
 {
     // interface
     public interface IPerson
