@@ -22,19 +22,18 @@ public class Program
 
             if (!char.IsLetterOrDigit(temp[0][0]))
                 throw new Exception("Wrong Pattern of Email!!! Can't start with special character");
-
-            // Check consecutive dots
             for (int i = 0; i < input.Length - 1; i++)
             {
                 if (input[i] == '.' && input[i + 1] == '.')
                     throw new Exception("Invalid Email!!! There can't be consecutive periods.");
             }
 
-            // Only allow letters, digits and dot
             if (Regex.IsMatch(input, @"[^a-zA-Z0-9.@]"))
                 throw new Exception("Special characters are not allowed except '.' and '@'");
-
-            // Domain must contain dot
+            
+            if(temp.Length>256)
+                throw new Exception("Length of Local Username can't be greater than 256");
+            
             if (!temp[1].Contains("."))
                 throw new Exception("There should be a domain name after @");
 
