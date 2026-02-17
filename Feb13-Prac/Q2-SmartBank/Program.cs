@@ -109,7 +109,7 @@ public class CreditRiskProcessor
 }
 
 public class InvalidCreditDataException : Exception
-{
+{p
     public InvalidCreditDataException(string message) : base(message)
     {
     }

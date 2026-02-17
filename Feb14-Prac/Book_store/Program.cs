@@ -5,7 +5,7 @@ public class InvalidBookDataException : Exception
 public InvalidBookDataException(string msg) : base(msg) { }
 }
 
-// 🔹 Book Class
+
 public class Book
 {
 private int price;
@@ -64,7 +64,6 @@ Console.WriteLine("Updated Stock: " + newStock);
 }
 }
 
-// 🔹 Program Class
 public class Program
 {
 public static void Main()
