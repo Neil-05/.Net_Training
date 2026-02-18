@@ -18,14 +18,19 @@ public class Program
     public static List<T> Filter<T>(List<T> items, Predicate<T> match)
     {
         // TODO: return a new list with matched items
-        var result=new List<T>();
-        foreach(var item in  items)
-        {
-            if(match(item))
-            {
-                result.Add(item);
-            }
-        }
-        return result;
+        // var result=new List<T>();
+        // foreach(var item in  items)
+        // {
+        //     if(match(item))
+        //     {
+        //         result.Add(item);
+        //     }
+        // }
+
+
+        var result= items.Where(p=> match(p)).ToList();
+
+
+        return result.Count==0?default:result;
     }
 }

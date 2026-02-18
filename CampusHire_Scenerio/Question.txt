@@ -1,0 +1,43 @@
+Scenario-Based Coding Problem: CampusHire Applicant Management System
+
+Scenario:
+CampusHire is a professional consultancy firm that assists fresh graduates in finding suitable job opportunities.
+As part of their recruitment support process, CampusHire maintains applicant records containing personal, academic,
+and job preference details. These records are managed internally by the CampusHire operations team.
+
+To streamline this process, CampusHire requires a console-based application that allows their team to manage applicant
+information efficiently and securely.
+
+Problem Statement:
+You are required to design and develop a .Net-based console application for CampusHire that enables the team to
+register fresh graduates, manage their details, and persist applicant data for future access.
+
+Each applicant registering with CampusHire must provide the following details:
+
+• Applicant ID (Example: CH123456)  
+• Applicant Name  
+• Current Location (Mumbai / Pune / Chennai – select any one)  
+• Preferred Job Location (Mumbai / Pune / Chennai / Delhi / Kolkata / Bangalore – select any one)  
+• Core Competency (.NET / JAVA / ORACLE / Testing)  
+• Passing Year (Degree completion year)
+
+System Requirements:
+1. The CampusHire team should be able to add new applicant records into the system.
+2. All applicant records must be stored in a collection during runtime.
+3. Applicant data must be persisted into a file using serialization so that data is retained between executions.
+4. The system should provide functionality to:
+  - Display all applicant details
+  - Search for an applicant using Applicant ID
+  - Update applicant details
+  - Delete applicant records
+
+Validation Rules:
+The application must enforce the following validations:
+1. All fields are mandatory and cannot be left blank.
+2. Applicant ID must be exactly 8 characters long and should start with the prefix “CH”.
+3. Applicant Name must contain a minimum of 4 characters and a maximum of 15 characters.
+4. Passing Year must not be greater than the current year.
+
+Expected Outcome:
+By implementing this application, CampusHire will be able to efficiently manage applicant information,
+ensure data consistency through validation rules, and securely store applicant records using file-based serialization.
