@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Employees>
+    <EmployeeId>1</EmployeeId>
+    <FullName>Asha Kumar</FullName>
+    <Department>IT</Department>
+    <Salary>65000.00</Salary>
+  </Employees>
+  <Employees>
+    <EmployeeId>2</EmployeeId>
+    <FullName>Ravi Sharma</FullName>
+    <Department>HR</Department>
+    <Salary>30000.00</Salary>
+  </Employees>
+  <Employees>
+    <EmployeeId>4</EmployeeId>
+    <FullName>Neil Parkhe</FullName>
+    <Department>AI</Department>
+    <Salary>600000.00</Salary>
+  </Employees>
+  <Employees>
+    <EmployeeId>5</EmployeeId>
+    <FullName>Harass</FullName>
+    <Department>ML</Department>
+    <Salary>30.00</Salary>
+  </Employees>
+  <Employees>
+    <EmployeeId>1002</EmployeeId>
+    <FullName>Mayank Kumar</FullName>
+    <Department>Platform Engineer</Department>
+    <Salary>34000.00</Salary>
+  </Employees>
+  <Employees>
+    <EmployeeId>1003</EmployeeId>
+    <FullName>Uttkarsh Chugh</FullName>
+    <Department>Android</Department>
+    <Salary>40000.00</Salary>
+  </Employees>
+</NewDataSet>
