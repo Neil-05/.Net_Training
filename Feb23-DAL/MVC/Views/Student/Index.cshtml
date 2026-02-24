@@ -1,0 +1,22 @@
+@model List<MVC.Models.Student>
+
+<h2>Students</h2>
+
+<a asp-action="Create">Add Student</a>
+
+<table border="1">
+<tr>
+    <th>Full Name</th>
+    <th>City</th>
+    <th>Marks</th>
+</tr>
+
+@foreach (var s in Model)
+{
+    <tr>
+        <td>@s.FullName</td>
+        <td>@s.City</td>
+        <td>@s.Marks</td>
+    </tr>
+}
+</table>

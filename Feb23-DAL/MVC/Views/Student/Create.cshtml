@@ -1,0 +1,24 @@
+@model MVC.Models.Student
+
+<h2>Add Student</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Full Name</label>
+        <input asp-for="FullName" />
+    </div>
+
+    <div>
+        <label>City</label>
+        <input asp-for="City" />
+    </div>
+
+    <div>
+        <label>Marks</label>
+        <input asp-for="Marks" type="number" />
+    </div>
+
+    <button type="submit">Save</button>
+
+</form>
