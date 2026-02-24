@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 400px; border-radius: 15px;">
+        
+        <h2 class="text-center mb-4 text-primary">
+            Lovely Professional University  
+            <br />
+            <small class="text-muted">Registration Form</small>
+        </h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <input class="form-control" asp-for="Name" placeholder="Enter your Name" />
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" asp-for="Email" placeholder="Enter your Email" />
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" asp-for="MobileNumber" type="tel" placeholder="Enter your Mobile Number" />
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" asp-for="Password" type="password" placeholder="Enter your Password" />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Register
+            </button>
+
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="alert alert-success mt-3 text-center">
+                @Model.Message
+            </div>
+        }
+
+    </div>
+</div>
