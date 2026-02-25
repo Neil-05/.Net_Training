@@ -17,7 +17,6 @@ namespace MVC.Controllers
             _logger = logger;
         }
 
-        // LIST
         public IActionResult Index()
         {
             _logger.LogInformation("Fetchingfrom the Database....");

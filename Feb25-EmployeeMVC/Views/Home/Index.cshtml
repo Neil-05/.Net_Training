@@ -1,0 +1,40 @@
+﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Message"] = "Welcome to ASP.NET MVC!";
+    ViewData["Number"] = 12345;
+}
+
+
+<div class="text-center">
+    <marquee>
+        <h1 class="display-4">Welcome</h1>
+
+        @for (int i = 0; i < ViewBag.NumberofLines; i++)
+        {
+            <p>This is line number @i</p>
+        }
+    </marquee>
+</div>
+
+<div class="text-center">
+    @{
+        string[] arr = ViewBag.MyVariable.ToString().Split(",");
+    }
+  <h1> Countries </h1>
+    @foreach (string country in arr)
+    {
+        <p>@country</p>
+    }
+
+    <table border="1">
+    @foreach (var pair in ViewData)
+    {
+        <tr>
+            <td>@pair.Key</td>
+            <td>@pair.Value</td>
+        </tr>
+    }
+</table>
+</div>
+

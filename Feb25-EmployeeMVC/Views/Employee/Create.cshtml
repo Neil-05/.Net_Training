@@ -1,0 +1,25 @@
+@model MVC.Models.Employee
+
+<h2>Add Employee</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Department</label>
+        <input asp-for="Dept" />
+    </div>
+
+    <div>
+        <label>Salary</label>
+        <input asp-for="Amount" type="number" />
+    </div>
+
+    <button type="submit">Save</button>
+
+</form>
