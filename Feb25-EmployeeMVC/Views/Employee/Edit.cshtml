@@ -1,0 +1,28 @@
+@model Feb25_EmployeeMVC.Models.Employee
+
+<h2>Edit</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="EmployeeId" />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="FullName" />
+        <span asp-validation-for="FullName"></span>
+    </div>
+
+    <div>
+        <label>Dept</label>
+        <input asp-for="Dept" />
+        <span asp-validation-for="Dept"></span>
+    </div>
+
+    <div>
+        <label>Amount</label>
+        <input asp-for="Amount" />
+    </div>
+
+    <button type="submit">Update</button>
+
+</form>

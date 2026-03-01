@@ -1,0 +1,99 @@
+@model FlightSearchEngine.Models.SearchViewModel
+
+@{
+    ViewData["Title"] = "Discover Your Next Adventure";
+}
+
+<div class="hero-section">
+    <div class="hero-content animate__animated animate__fadeIn">
+        <h1>Discover the World</h1>
+        <p>Premium flight search experience with exclusive deals across 5,000+ global destinations.</p>
+    </div>
+</div>
+
+<div class="search-container">
+    <div class="search-card animate__animated animate__zoomIn">
+        <form asp-controller="Flight" method="post" id="searchForm">
+            <div asp-validation-summary="All" class="text-danger mb-4"></div>
+
+            <div class="row g-4">
+                <div class="col-lg-5 col-md-6">
+                    <label asp-for="Source" class="form-label fw-semibold">Origin</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-plane-departure"></i></span>
+                        <select asp-for="Source" asp-items="Model.SourceList" class="form-select" required>
+                            <option value="">Where from?</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 col-md-6">
+                    <label asp-for="Destination" class="form-label fw-semibold">Destination</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        <select asp-for="Destination" asp-items="Model.DestinationList" class="form-select" required>
+                            <option value="">Where to?</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12">
+                    <label asp-for="NumberOfPersons" class="form-label fw-semibold">Travelers</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-users"></i></span>
+                        <input asp-for="NumberOfPersons" type="number" class="form-control" min="1" max="10" value="1" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-slate-100 text-slate-800 px-3 py-2"><i class="fas fa-check-circle text-primary me-1"></i> Best Price</span>
+                        <span class="badge bg-slate-100 text-slate-800 px-3 py-2"><i class="fas fa-check-circle text-primary me-1"></i> Flex Dates</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end mt-4 mt-md-0">
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+                        <button type="submit" asp-action="SearchFlightsWithHotels" class="btn btn-packages btn-lg px-4">
+                            <i class="fas fa-hotel me-2"></i> Fight + Hotel
+                        </button>
+                        <button type="submit" asp-action="SearchFlights" class="btn btn-primary btn-flights btn-lg px-5">
+                            Search Flights <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            @Html.AntiForgeryToken()
+        </form>
+    </div>
+</div>
+
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner-premium mb-4"></div>
+    <h2 class="animate__animated animate__pulse animate__infinite">Finding the best routes...</h2>
+    <p class="text-slate-300">Comparing prices across hundreds of airlines</p>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            $('#searchForm').submit(function (e) {
+                var source = $('#Source').val();
+                var dest = $('#Destination').val();
+
+                if (source && dest && source === dest) {
+                    alert('Origin and Destination cannot be the same!');
+                    e.preventDefault();
+                    return false;
+                }
+
+                if ($(this).valid()) {
+                    $('#loadingOverlay').css('display', 'flex').hide().fadeIn();
+                }
+            });
+        });
+    </script>
+}
+

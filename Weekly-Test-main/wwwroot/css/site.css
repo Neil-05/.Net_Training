@@ -1,0 +1,373 @@
+/* 
+ * SkySearcher Premium Design System
+ * -----------------------------------------
+ * Colors: Indigo (#6366f1), Violet (#8b5cf6), Slate (#0f172a)
+ * Aesthetic: Modern Glassmorphism, Sophisticated Gradients, High Contrast
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary: #8b5cf6;
+    --accent: #f59e0b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --bg-main: #f8fafc;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --glass-white: rgba(255, 255, 255, 0.7);
+    --glass-dark: rgba(15, 23, 42, 0.8);
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+/* Global Reset & Base */
+body {
+    background-color: var(--bg-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--slate-900);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--slate-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--slate-300);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Glassmorphism Utilities */
+.glass-effect {
+    background: var(--glass-white);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-navbar {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section Refined */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: radial-gradient(circle at top right, #6366f1, #0f172a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -120px;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+    animation: rotate 100s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--slate-200);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Container & Card */
+.search-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--slate-100);
+    transition: transform 0.3s ease;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--slate-700);
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    border-color: var(--primary);
+}
+
+.input-group-text {
+    border: 1px solid var(--slate-200);
+    border-right: none;
+    background: var(--slate-50);
+    color: var(--slate-800);
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--slate-200);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: none;
+}
+
+/* Premium Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+}
+
+.btn-flights {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+}
+
+.btn-packages {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-packages:hover {
+    background: var(--slate-50);
+}
+
+/* Results Section Refactoring to Cards */
+.results-container {
+    padding-top: 150px;
+    padding-bottom: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.flight-ticket-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border-left: 6px solid var(--primary);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.flight-ticket-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.ticket-segment {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.airport-code {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--slate-900);
+}
+
+.airport-name {
+    font-size: 0.75rem;
+    color: var(--slate-700);
+    text-transform: uppercase;
+}
+
+.flight-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    position: relative;
+}
+
+.flight-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: dashed var(--slate-200);
+    z-index: 1;
+}
+
+.flight-path-icon {
+    background: white;
+    z-index: 2;
+    padding: 0 10px;
+    color: var(--primary);
+}
+
+.price-section {
+    text-align: right;
+    padding-left: 2rem;
+    border-left: 1px solid var(--slate-100);
+}
+
+.price-tag {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+/* Loading Overlay Refined */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--glass-dark);
+    z-index: 10000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.spinner-premium {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .flight-ticket-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ticket-segment {
+        margin-bottom: 1.5rem;
+    }
+
+    .price-section {
+        border-left: none;
+        border-top: 1px solid var(--slate-100);
+        padding-top: 1.5rem;
+        width: 100%;
+    }
+}

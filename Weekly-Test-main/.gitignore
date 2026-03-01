@@ -1,0 +1,39 @@
+# .gitignore for .NET Project
+
+# Compiled output
+bin/
+obj/
+/bin/
+/obj/
+out/
+[Bb]in/
+[Oo]bj/
+
+# IDE files
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.doccache
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.doccache
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# User-specific settings
+appsettings.json
+# (Note: Usually we keep appsettings.json if it doesn't have secrets, but it's safer to exclude and provide appsettings.Example.json)
+
+# User-secrets
+secrets.json
+
+# Tooling
+.terraform/
+.vagrant/
+node_modules/

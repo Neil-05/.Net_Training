@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Page 4</h2>
+
+<p id="result"></p>
+
+<script>
+var name = sessionStorage.getItem("studentName");
+var city = sessionStorage.getItem("studentLocation");
+var state= sessionStorage.getItem("studentState");
+
+document.getElementById("result").innerHTML =
+    "Student: " + name + "<br>Location: " + city + "<br>State: " + state;
+</script>
+
+</body>
+</html>

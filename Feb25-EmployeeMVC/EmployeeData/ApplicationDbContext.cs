@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using MVC.Models;
+using Feb25_EmployeeMVC.Models;
 
-namespace MVC.Data
+namespace Feb25_EmployeeMVC.Data
 {
     public class ApplicationDbContext : DbContext
     {

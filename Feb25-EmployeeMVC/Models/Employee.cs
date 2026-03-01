@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MVC.Models
+namespace Feb25_EmployeeMVC.Models
 {
     public class Employee
     {
